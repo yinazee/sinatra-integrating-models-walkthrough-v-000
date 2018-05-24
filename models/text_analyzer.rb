@@ -40,7 +40,6 @@ class TextAnalyzer
         biggest = {}
         biggest[key] = value
       end
-      binding.pry
     biggest
   end
 
