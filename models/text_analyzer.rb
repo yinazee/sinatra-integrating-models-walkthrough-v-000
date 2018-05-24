@@ -28,7 +28,7 @@ class TextAnalyzer
     arr = s1.split('')
     arr1 = arr.uniq
     arr2 = {}
-
+    binding.pry
     arr1.map do |c|
       arr2[c] =  arr.count(c)
     end
@@ -50,7 +50,7 @@ class TextAnalyzer
         biggest[key] = value
       end
     end
-    binding.pry
+
     biggest
   end
 
