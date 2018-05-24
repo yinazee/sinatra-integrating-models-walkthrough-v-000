@@ -1,5 +1,7 @@
 # Your TextAnalyzer model code will go here.
+
 require 'pry'
+
 
 class TextAnalyzer
   attr_reader :text
@@ -31,6 +33,7 @@ class TextAnalyzer
       arr2[c] =  arr.count(c)
     end
 
+
     biggest = { arr2.keys.first.upcase => arr2.values.first }
 
     arr2.each do |key, value|
@@ -39,9 +42,16 @@ class TextAnalyzer
         biggest = {}
         biggest[key] = value
 
+    biggest = { arr2.keys.first => arr2.values.first }
+
+    arr2.each do |key, value|
+      if value > biggest.values.first
+        biggest = {}
+        biggest[key] = value
+
       end
     end
-
+    binding.pry
     biggest
   end
 end
